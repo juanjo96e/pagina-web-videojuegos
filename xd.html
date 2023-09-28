@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Navegador de Historia de Videojuegos</title>
+    <link rel="stylesheet" href="web.css">
+
+    <style>
+      @font-face {
+      font-family:'due' ;
+      src: url(fuentes/due-form-due-form-svg-400.otf);
+  }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <button onclick="mostrarInicio()" style="font-family: 'due';">Inicio</button><br><br><br>
+      <button onclick="mostrarHistoria()" style="font-family: 'due';">Historia</button><br><br><br>
+      <button onclick="mostrarJuegos()" style="font-family: 'due';">Juegos</button><br><br><br>
+    </nav>
+    
+    <main id="contenido-principal">
+      <h1 style="font-family: 'due';">Bienvenido a la Historia de los Videojuegos</h1>
+      <p>Este es un sitio web que te llevará a través de la historia de los videojuegos, desde sus orígenes hasta el presente.</p>
+      <img src="timeline.jpg" alt="Imagen de un videojuego" width="600px" height="800">
+    </main>
+    <script>
+      // Funciones para mostrar el contenido según el botón que se seleccione
+      function mostrarInicio() {
+        document.getElementById("contenido-principal").innerHTML = `
+          <h1 style="font-family: 'due';">Bienvenido a la Historia de los Videojuegos</h1>
+          <p>Este es un sitio web que te llevará a través de la historia de los videojuegos, desde sus orígenes hasta el presente.</p>
+          <img src="timeline.jpg" alt="Imagen de un videojuego" width="600px" height="800">
+          
+        `;
+      }
+      
+      function mostrarHistoria() {
+        document.getElementById("contenido-principal").innerHTML = `
+            <div><h1 style="font-family: 'due';">Historia de los videojuegos</h1></div><br><br><br><br>
+                <img src="historia.jpg" alt="Imagen de un videojuego" width="250px" height="200">
+                <p>Los videojuegos han evolucionado mucho desde sus comienzos en la década de 1950.<br> Los primeros videojuegos eran simples juegos de mesa electrónicos, pero con el tiempo se han desarrollado juegos cada vez más complejos <br> que han cambiado la forma en que jugamos y nos divertimos.</p>
+                    <img src="magnabox.jpg" alt="Imagen de un videojuego" width="250px" height="200">
+                    <img src="magnavox1.webp" alt="Imagen de un videojuego" width="250px" height="200">
+                <p>En los años 80 y 90, los videojuegos comenzaron a popularizarse con la aparición de consolas de juegos como la Atari y la Nintendo.<br> La introducción de los juegos en línea y las mejoras en la tecnología de los videojuegos han permitido a los desarrolladores crear juegos más realistas e interactivos.</p>
+                    <img src="atari.webp" alt="Imagen de un videojuego" width="250px" height="200">
+                    <img src="nes.avif" alt="Imagen de un videojuego" width="250px" height="200">
+                <p>En la actualidad, los videojuegos son una forma de entretenimiento muy popular en todo el mundo, con una gran variedad de géneros y estilos para elegir.<br> Desde juegos de acción y aventuras hasta juegos de estrategia y simulación, hay algo para todos.<br>Las grandes competidoras de nuestro dia son Play station 5, XBOX series X y Nintendo Switch</p>
+                <table>
+                    <td>
+                        <img src="playxboxswitch.jpg" alt="Imagen de un videojuego" width="290px" height="200">
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="https://www.elcorteingles.es/videojuegos/ps5/#" target="_blank">Enlace compra ps5</a></li>
+                            <li><a href="https://www.xbox.com/es-ES/consoles/xbox-series-x" target="_blank">Enlace compra xbox</a></li>
+                            <li><a href="https://www.nintendo.es/Hardware/Familia-Nintendo-Switch/Nintendo-Switch/Nintendo-Switch-1148779.html" target="_blank">Enlace compra switch</a></li>
+                        </ul>
+                    </td>
+                </table>
+        <h2>Realidad Virtual</h2>
+            <p>El concepto de "juegos de VR" se utiliza para describir una nueva generación de juegos de PC con tecnología de realidad virtual (VR) que ofrecen a los jugadores una perspectiva de la acción en primera persona y verdaderamente inmersiva.<br> El participante no solo experimenta sino que también influencia el entorno de juego con una amplia gama de dispositivos y accesorios para juegos de RV, incluidos auriculares de RV, guantes equipados con sensores, controladores de mano y más.
+                <br>Los juegos de realidad virtual pueden ejecutarse en sistemas independientes, consolas especiales para juegos, o en PC</p>
+                <img src="Realidad-Virtual.jpg" alt="Imagen de un videojuego" width="700" height="432">  <video src="./rv.ogg" controls width="700" height="470" type="video/mp4"> Tu navegador no soporta video HTML5.
+
+        <h2>¿Qué videojuego marcó tu infancia?</h2>
+            <form>
+                <label for="juego">Escribe el nombre de tu videojuego favorito:</label><br>
+                <input type="text" id="juego" name="juego"><br>
+                <label for="comentarios">¿Por qué te gustó tanto ese videojuego?</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        <h2>Video resumen de la historia de los videojuegos</h2>
+            <p>Para aprender más sobre la historia de los videojuegos, te recomendamos ver este video resumen:</p>
+            <a href="https://youtu.be/KRRfb-pSZy8" target="_blank">Resumen de la historia de los videojuegos</a>
+        `;
+      }
+      
+      
+      function mostrarJuegos() {
+        document.getElementById("contenido-principal").innerHTML = `
+          <h1 style="font-family: 'due';">LOS JUEGOS MAS DESTACADOS</h1>
+          <p>En esta sección encontrarás información sobre algunos de los juegos más populares de todos los tiempos, desde Pac-Man hasta Fortnite.
+            </p>
+            <h2>Tennis for Two (1958)</h2> <img src="Tennis.webp" alt="Imagen de un videojuego" width="250px" height="200"> 
+            <p>Podríamos considerarlo como el primer videojuego de la historia, desarrollado en el Laboratorio Nacional de Brookhaven y que recreaba una vista lateral de lo que parecía una pista de tenis.<br> Dos jugadores podían devolverse la pelota pulsando un botón en el momento justo en el que pasaba por nuestro campo e, incluso, era posible escoger el ángulo de la trayectoria. Muy rudimentario, pero efectivo para la época.</p>
+            <h2>Pong (1972)</h2><img src="pong.jpg" alt="Imagen de un videojuego" width="250px" height="200">
+            <p>Qué decir del primer juego que llegó a los bares y salones recreativos de los años 70. Dos palitos, una línea vertical para marcar la división de los dos campos y la posibilidad de golpear a la bola <br> para derrotar a nuestro adversario, que podía ser un amigo o la propia máquina.<br> Pong, de Atari, señaló el camino de los videojuegos a lo largo de la siguiente década en todas las consolas de primera generación.</p>
+            <h2>Space Invaders (1978)</h2><img src="Space.jpg" alt="Imagen de un videojuego" width="250px" height="200">
+            <p>Space Invaders (1978) Taito fue la responsable de que muchos padres definan los videojuegos como marcianitos.<br> Space Invaders fue el primero en reventar los salones recreativos con esa horda de enemigos que van descendiendo por la pantalla mientras les disparamos y nos protegemos con los parapetos. <br> Un clasicazo que cuando cerramos los ojos podemos escuchar nítidamente el sonido de sus lásers y explosiones. A partir de él, los videojuegos cambiaron para siempre.</p>
+            <h2>Super Mario Bros 1985</h2><img src="Super.jpg" alt="Imagen de un videojuego" width="250px" height="200">
+            <p>El género de las plataformas nació prácticamente con Mario cuando en 1985 Nintendo lanzó la primera entrega para NES.<br> Se trata de un juego con unas mecánicas muy avanzadas, decenas de escenarios y una forma de progresar que nos obligará a estar horas frente a la pantalla.<br> Seguramente antes hubo algún juego parecido, pero ninguno ayudó tanto al plataformismo a sentar las bases en las siguientes décadas. Y no solo en los títulos del propio Mario.</p>
+            <h2>Pokemon Rojo y Azul</h2><img src="pokemon1.webp" alt="Imagen de un videojuego" width="250px" height="200">
+            <p>Estos dos Pokémon son el pistoletazo de salida para una de las franquicias más rentables de la historia de los videojuegos.<br> No existe nada parecido a un juego de Pokémon, por lo que con estas ediciones Roja y Azul (más la Verde), Gamefreak y <br> Nintendo estrenaron un nuevo camino de títulos que se encuentran entre los más vendidos de toda la historia. <br> Su impacto en el mercado fue tremendo y ayudó a Nintendo a posicionar sus máquinas de forma única, algo a lo que el resto de marcas no podían siquiera aspirar. <br> Desde entonces aquellos primeros cartuchos llevamos 26 años lanzando Pokéball a todo lo que se mueve y recogiendo por los campos criaturas que han crecido en número desde aquellas primeras 255.</p>
+            <h2>GTA 3</h2><img src="gta.webp" alt="Imagen de un videojuego" width="250px" height="200">
+            <p>Los dos primeros GTA tenían en su interior el germen de lo que GTA III consiguió tiempo después: un mapa de una ciudad inmensa y disponible para recorrer, <br> un concepto sandbox, misiones que recogemos en cabinas de teléfono y la posibilidad de hacernos con cualquier vehículo con el que nos podamos cruzar.<br> La gran diferencia, que lo convirtió en un éxito sin precedentes, fue transformar esa vieja vista cenital en un juego 3D en tercera persona. <br> A partir de ese instante, y con la ayuda de una narrativa adulta por parte de Rockstar, la franquicia cogió el vuelo que llevaba años esperando. <br> Desde ese instante, se sucedieron los éxitos hasta hoy, donde tenemos un GTA V que cumplirá 10 años en 2023. Por cierto, ¿cuántos mundos abiertos con formato sandbox han llegado al mercado de los videojuegos? Pues todo fue gracias a GTA III.</p>
+        `;
+      }
+    </script>
+    <footer>
+      <p>&copy; 2023 Autor Juan José Ocón 1GSI</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/juan-jos%C3%A9-oc%C3%B3n-alba-246236153"> LINKEDIN</a></li><br><br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.474508245212!2d135.42774767636084!3d34.66797178496716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e9c501ece2cf%3A0xab0aaf97d661efa5!2sSUPER%20NINTENDO%20WORLD%E2%84%A2!5e0!3m2!1ses!2ses!4v1685006278818!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </ul>
+    </footer>
+  </body>
+</html>
